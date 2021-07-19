@@ -56,13 +56,16 @@ body {
     font-size: 13px;
     font-weight: var(--fw-reg); 
 }
+.app-bg {
+    opacity: 20%;
+}
 .having-window {
     display: none;
     position: fixed;
     width: 1004px;
     height: 620px;
     left: 50%;
-    top: 50%;
+    top: 35%;
     z-index: 0;
     transform: translate(-50%, -50%);
     font-size: 1.92rem;
@@ -77,39 +80,6 @@ body {
     filter: drop-shadow(0 4px 4px rgba(31, 31, 31, 25%));
 }
 
-.closeout {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-content: flex-end;
-}
-.button-close {
-    margin-top: .75rem;
-    margin-right: .68rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: var(--off-white);
-    border: none;
-}
-.button-close:hover {
-    border: 1px solid var(--error);
-    font-weight: var(--fw-bold);
-    background-color: var(--error);
-    border-radius: 3px;
-}
-
-a.close {
-    margin-top: .75rem;
-    font-size: var(--fs-xlarge);
-    border: none;
-    vertical-align: middle;
-    align-self: center;
-    color: var(--dark-blue); 
-}
-.close:hover {
-    color: var(--white);
-    cursor: pointer;
-}
 .form-layout {
     height: auto;
     width: 904px;
@@ -226,24 +196,23 @@ form,
     height: 2.15rem;
     margin-bottom: 0;
 }
-label[for=user_email]  {
+label {
     width: 26.15rem;
     text-align: left;
     margin: auto;
     font-size: var(--fs-18px);
 }
-label[for=user_email]:hover {
-    color: var(--info);
-}
-input[type=text] {
+
+input {
     width: 26.15rem;
     height: 2.46rem;
     border: 1px solid var(--very-lt-gray);
     border-radius: var(--fs-large);  
     margin-bottom: 3px;
     padding-left: var(--fs-xxsmall);
+    outline: none;
 }
-input[type=text]:hover {
+input:hover {
     border: 1px solid var(--info);
 }
 .m-email-request {
@@ -285,9 +254,6 @@ p.recovery-link {
         justify-content: center;
         align-content: center;
     }
-    .button-close {
-        margin-right: 0;
-    }
     .form-layout {
         width: 440px;
         max-width: 100%;
@@ -300,7 +266,6 @@ p.recovery-link {
     .reset-window > .form-layout {
         padding-top: 1.5rem;
     }
-    
     .details {
         max-width: 100%;
         height: auto;
@@ -333,19 +298,16 @@ p.recovery-link {
         height: auto;
         padding: auto;
     }
-    label {
+    label,
+    input {
         max-width: 100%;
     }
     p.recovery-link {
-        max-width: 100%;
-        margin-bottom: 20px;
-        padding-left: 8px;
+        width: 340px;
+        margin: 0 auto;
+        margin-bottom: 20px;  
     }
-    input,
-    .submit-request,
-    .submit-confirm {
-        max-width: 100%;
-    }  
+
 }
 
 /* max width 500px */
@@ -366,10 +328,6 @@ p.recovery-link {
     }
     .right {
         height: auto;
-    }
-    /* Hiding the close "X" button */
-    .button-close {
-        display: none;
     }
     /* Hiding the light-bulb */
     .bulb,

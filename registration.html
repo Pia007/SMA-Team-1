@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author"  content="Pia Torain">
     <meta name="description"  content="The Registration Page of SMA-T1 pro">
-    <link rel="stylesheet" href="header-and-bg.css">
+    <link rel="stylesheet" href="/css/header-bg-and-X.css">
     <link rel="stylesheet" href="registration.css">
-    <link rel="stylesheet" href="registration-checkbox.css">
+    <link rel="stylesheet" href="/css/registration-checkbox.css">
     <link rel="stylesheet" href="registration-acct-confirm.css">
     <title>Registration</title>
 </head>
@@ -38,7 +38,7 @@
     
     <!-- BACKGROUND IMAGE -->
     <div id="bg">
-        <img src="assets/bg-SMA.png" alt="">
+        <img class="app-bg" id="img-bg" src="assets/bg-SMA.png" alt="">
     </div>
     <!-- /BACKGROUND IMAGE -->
 
@@ -46,14 +46,11 @@
     <section class="register-window" id="register">
         <!-- X TO CLOSE WINDOW -->
         <div class="closeout">
-            <button class="button-close">
-                <a class="close" 
-                    href="login.html"
-                    target="_blank"
-                    alt="link to login">
-                    X
-                </a>
-            </button>
+            <div class="closeout">
+                <button id="registrationClose" class="button-close" type="button">
+                    <img src="assets/X.svg">
+                </button>
+            </div>
         </div>
 
         <div class="form-layout">
@@ -78,7 +75,7 @@
                                 <p class="vote-text">Vote and comment</p>
                             </div>
                             <div class="save-tag">
-                                <img src="assets/blue-tag.png" alt="blue-tag">
+                                <img src="assets/yellow-tag.png" alt="yellow-tag">
                                 <p class="save-text">Safe your favorite tags, comments, and jobs</p>
                             </div>
                         </div>
@@ -107,22 +104,22 @@
                 
                 
                 <!-- Registration Form-->
-                <form action="/registration" method="POST" id="form" class="form-right">
+                <form action="/registration" method="POST" id="registration-form" class="form-right">
                 
                     <!-- Registration -->
                     <div class="form-container">
                         <label for="user_name">Display Name</label>
-                        <input name="user_name" type="text" id="user_name" autocomplete="on" />
+                        <input name="user_name" type="text" id="user_name" autocomplete="on" required/>
                     </div>
 
                     <div class="form-container">
                         <label for="user_email">Email</label>
-                        <input name="user_email" type="text" id="user_email" autocomplete="on" />
+                        <input name="user_email" type="email" id="user_email" autocomplete="on" required/>
                     </div>
 
                     <div class="form-container">
                         <label for="user_paswword" >Password</label>
-                        <input name="user_password" type="password" id="user_password" autocomplete="on" />
+                        <input name="user_password" type="password" id="user_password" autocomplete="on" required minlength="8"/>
                     </div>
 
                     <div class="criteria">
@@ -157,7 +154,7 @@
 
                         <!-- Submit and open Email Sent Pop-up? -->
                         <div class="form-container">
-                            <button type="button" id="sign-up" class="submit-signup" >Sign up</button>
+                            <input type="submit" id="sign-up" class="submit-signup" value="Sign up" />
                         </div>
                         <!-- /Submit and open Email Sent Pop-up? -->
 
@@ -172,7 +169,7 @@
                 <!-- /Registration Form-->
 
                 <div class="existing-account">
-                    <p class="existing-account-p">Already have an account?<a href="login.html" target="_blank" > Log in</a></p>
+                    <p class="existing-account-p">Already have an account?<a href="login.html" > Log in</a></p>
                 </div>        
             </div>
             
@@ -216,7 +213,7 @@
 
                 <!-- Button will open link to Almost There Page-->
                 <div class="acct-success">
-                    <button type="submit" class="btn-reset-success"> <a href="almost.html" target="_blank" class="go-to-almost" >OK</a></button>
+                    <button type="submit" class="btn-reset-success"> <a href="almost.html" class="go-to-almost" >OK</a></button>
                 </div>
 
                 <!-- /Button will open link to Almost There Page -->

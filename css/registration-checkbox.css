@@ -40,12 +40,12 @@
 [type="checkbox"]:checked + label::before {
     content: "";
     position: absolute;
-    left: 2px;
-    top: 1px;
+    left: 0;
+    top: 0;
     width: 15px;
     height: 14px;
     background: #ffffff;
-    border: none;
+    outline: none;
 }
 [type="checkbox"]:checked + label::before {
     border: 2px solid #CCCCCC;
@@ -55,7 +55,8 @@
 [type="checkbox"]:checked + label::after{
     content: "";
     position: absolute;
-    margin: 2px 3px;
+    left: 0;
+    top: 1px;
     width: 15px;
     height: 14px;
     background-image: url(assets/small-check.png);
@@ -71,7 +72,7 @@
     content: "";
     position: absolute;
     left: 0;
-    top: 0;
+    top: 1px;
     width: 15px;
     height: 14px;
     background-image: url(assets/small-check.png);

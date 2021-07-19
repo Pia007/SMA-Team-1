@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author"  content="Pia Torain">
     <meta name="description"  content="The Forgot Password page of SMA-T1 pro">
-    <link rel="stylesheet" href="header-and-bg.css">
-    <link rel="stylesheet" href="forgot-pwd.css">
-    <link rel="stylesheet" href="forgot-pwd-email-sent.css">
+    <link rel="stylesheet" href="/css/header-bg-and-X.css">
+    <link rel="stylesheet" href="/css/forgot-pwd.css">
+    <link rel="stylesheet" href="/css/forgot-pwd-email-sent.css">
     <title>Forgot Password</title>
 </head>
 <body>
@@ -27,7 +27,7 @@
         
         <div class="header-right" id="right">
             <a class="links" href="#home">Home</a>
-            <a class="links" type="submit" href="login.html" target="_blank">Log in</a>
+            <a class="links" type="submit" href="login.html">Log in</a>
             <a class="links" href="#signup">Sign Up</a>
             <a class="links" href="#about-us">About Us</a>
         </div>
@@ -37,21 +37,16 @@
     
     <!-- BACKGROUND IMAGE -->
     <div id="bg">
-        <img src="assets/bg-SMA.png" alt="">
+        <img id="img-bg" class="app-bg" src="assets/bg-SMA.png" alt="">
     </div>
     <!-- /BACKGROUND IMAGE -->
 
     <!-- Having Trouble Window -->
-    <section class="having-window" id="main">
+    <section class="having-window" id="forgot">
         <!-- X TO CLOSE WINDOW -->
         <div class="closeout">
-            <button class="button-close">
-                <a class="close" 
-                    href="login.html"
-                    target="_blank"
-                    alt="">
-                    X
-                </a>
+            <button id="forgotClose" class="button-close" type="button">
+                <img src="assets/X.svg">
             </button>
         </div>
 
@@ -78,7 +73,7 @@
             </div>
 
             <div class="right">
-                <form action="/reset-password" method="POST" id="form" class="form-right">
+                <form action="/reset-password" method="POST" id="forgot-form" class="form-right">
                 
                     <!-- Email -->
                     <div class="form-container">
@@ -87,7 +82,7 @@
             
                     <div class="form-container">
                         <label for="user_email">Email</label>
-                        <input name="user_email" type="text" id="user_email" autocomplete="on" required/>
+                        <input name="user_email" type="email" id="user_email" autocomplete="on" required/>
                     </div>
 
                     <div class="email-request">
@@ -97,7 +92,7 @@
 
                     <!-- Submit and open Email Sent Pop-up? -->
                     <div class="form-container">
-                        <button  type='submit' id="mainBtn" class="submit-request" >Send email</button>
+                        <input type='submit' id="btn-send" class="submit-request" value="Send email" />
                     </div>
                     <!-- /Submit and open Email Sent Pop-up? -->
                 </form>
@@ -125,17 +120,18 @@
                     If you don't see the email from us, make sure to check your spam folder. Click <a href="#">resend email</a> if it has been over 5 minutes since the 
                     was sent.
                 </p>
-                <!-- Button will close email sent pop-up and link to Reset Password page. -->
+                <!-- Button will close email sent pop-up. Link to Reset Password page? -->
                 <div class="btn-ok">
-                    <button  type="submit"  id="emailBtnTwo" class="email-ok" ><a href="reset-pwd.html" target="_blank" alt="Link to reset password">Okay</a></button>
+                    <button  type="button"  id="emailBtnTwo" class="email-ok" ><a href="#" alt="Link to reset password">Okay</a></button>
                 </div>
-                <!-- /Button will close email sent pop-up and link to Reset Password page. -->
+                <!-- /Button will close email sent pop-up. Link to Reset Password page? -->
             </div>
         </div>
     </div>
     <!--/ Email Sent PopUp-->
 
-    <script src="forgot-pwd.js">
+    <!-- <script src="forgot-pwd.js"> -->
+    <script src="/jS/forgot-pwd.js"></script>
         
     </script> 
 </body>

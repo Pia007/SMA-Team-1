@@ -42,7 +42,7 @@
     --warning: #F0B518;
     --error: #D9534F;
     --dark-blue: #14223D;
-
+    --google-red: #DB4437;
 }
 
 *,
@@ -57,13 +57,16 @@ body {
     font-size: 13px;
     font-weight: var(--fw-reg);   
 }
+.app-bg {
+    opacity: 20%;
+}
 /* Registration Window */
 .register-window {
     position: fixed;
     width: 1004px;
     height: auto;
     left: 50%;
-    top: 50%;
+    top: 40%;
     z-index: 0;
     transform: translate(-50%, -50%);
     font-size: 1.92rem;
@@ -79,39 +82,6 @@ body {
 }
 .register-window {
     display: block;
-}
-.closeout {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-content: flex-end;
-}
-.button-close {
-    margin-top: .75rem;
-    margin-right: .68rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: var(--off-white);
-    border: none;
-}
-.button-close:hover {
-    border: 1px solid var(--error);
-    font-weight: var(--fw-robo-sbold);
-    background-color: var(--error);
-    border-radius: 3px;
-}
-
-.close {
-    margin-top: .75rem;
-    font-size: var(--fs-xlarge);
-    border: none;
-    vertical-align: middle;
-    align-self: center;
-    color: var(--dark-blue); 
-}
-.close:hover {
-    color: var(--white);
-    cursor: pointer;
 }
 
 /* Layout of Form Content */
@@ -148,8 +118,7 @@ p.save-text {
     font-weight: var(--fw-light);
     font-size: var(--fs-18px);
     margin-left: 10px;
-    padding-top: 10px;
-    
+    padding-top: 10px;  
 } 
 .up-vote,
 .down-vote {
@@ -213,12 +182,13 @@ a.github {
     padding-top: .5rem;
 }
 .google:hover {
-    background-color: var(--gray);
-    color: var(--white);
+    border: 1.5px solid var(--google-red);
+    color: var(--google-red);
 }
 .github:hover {
-    background: #f1f1f1;
-    color: #1f1f1f;
+    border: 1.5px solid black;
+    color: black;
+    background: var(--white);
 }
 /* Styling the form */
 form {
@@ -245,14 +215,10 @@ form {
     line-height: 21px;
     text-align: center;
 }
-
-.form-container input[for=user_name],
-.form-container input[for=user_email],
-.form-container input[for=user_password] {
+.form-container input {
     box-sizing: border-box;
     padding-left: 10px;
 }
-
 label {
     width: 255px;
     text-align: left;
@@ -260,16 +226,13 @@ label {
     margin-bottom: 0;
     font-size: var(--fs-default);
 }
-label:hover {
-    color: var(--info);
-    
-}
 input {
     width: 255px;
     height: 32px;
     border: 1px solid var(--very-lt-gray);
     border-radius: 15px;  
     padding-left: 10px;
+    outline: none;
 }
 input:hover {
     border: 1px solid var(--info);
@@ -385,7 +348,7 @@ p.reg-terms {
     display: flex;
     flex-direction: column;
     left: 50%;
-    top: 68%;
+    top: 55%;
     transform: translate(-50%, -50%);
     z-index: 1000;
 }
@@ -548,7 +511,7 @@ p.pop-text-one {
         font-weight: var(--fw-reg);
     }
     .existing-account-p {
-        width: 152px;
+        width: 160px;
         margin: 2rem auto;
         text-align: center;
         
