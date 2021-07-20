@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author"  content="Pia Torain">
     <meta name="description"  content="The Login in page of SMA-T1 pro">
-    <link rel="stylesheet" href="header-and-bg.css">
+    <link rel="stylesheet" href="css/header-bg-and-X.css">
     <link rel="stylesheet" href="reset-pwd.css">
     <link rel="stylesheet" href="reset-pwd-success.css">
     <title>Reset Password</title>
@@ -16,7 +16,7 @@
     
     <div class="header-layout">
         <div class="header-left" id="left">
-            <a class="m-header-link" href="home.html" target="_blank" alt="homepage-link" >
+            <a class="m-header-link" href="#" alt="homepage-link" >
                 <img class="mobile-arrow" src="assets/coolicon.png" width= 20 height= 20 alt="arrow-icon" />
             </a>
             <img class="logo" src="assets/logo-SMA.png"  width=170px height=72px alt="SMA-logo" />
@@ -26,10 +26,10 @@
         </div>
         
         <div class="header-right" id="right">
-            <a class="links" href="#home">Home</a>
-            <a class="links" type="submit" href="login.html" target="_blank">Log in</a>
-            <a class="links" href="#signup">Sign Up</a>
-            <a class="links" href="#about-us">About Us</a>
+            <a class="links" href="#">Home</a>
+            <a class="links" href="login.html" alt="link to login page">Log in</a>
+            <a class="links" href="registration.html" alt="linkt to registration page">Sign Up</a>
+            <a class="links" href="#">About Us</a>
         </div>
     </div>
  
@@ -37,7 +37,7 @@
     
     <!-- BACKGROUND IMAGE -->
     <div id="bg">
-        <img src="assets/bg-SMA.png" alt="">
+        <img class="app-bg" id="img-bg" src="assets/bg-SMA.png" alt="">
     </div>
     <!-- /BACKGROUND IMAGE -->
 
@@ -45,14 +45,11 @@
     <section class="reset-window" id="reset">
         <!-- X TO CLOSE WINDOW -->
         <div class="closeout">
-            <button class="button-close">
-                <a class="close" 
-                    href="login.html"
-                    target="_blank"
-                    alt="">
-                    X
-                </a>
-            </button>
+            <div class="closeout">
+                <button id="resetClose" class="button-close" type="button">
+                    <img src="assets/X.svg">
+                </button>
+            </div>
         </div>
 
         <div class="reset-form-layout">
@@ -78,15 +75,15 @@
             <!-- </div> -->
 
             <div class="right-reset">
-                <form action="/reset-password" mehtod="POST" id="form" class="form-right-reset">
+                <form action="/reset" method="POST" id="reset-form" class="form-right-reset">
                     <!--  Password Reset-->
                     <div class="form-container">
-                        <label for="user_password">Password</label>
-                        <input name="user_password" type="password" id="user_password" />
+                        <label for="new_password">Password</label>
+                        <input name="new_password" type="password" id="new_password" pattern="^(?=.*[A-Za-z])(?=.*\d).{8,}$" required/>
                     </div>
                     <div class="form-container">
-                        <label for="re-enter">Re-enter Password</label>
-                        <input name="re-enter" type="password" id="re-enter" autocomplete="on" />
+                        <label for="conf_password">Re-enter Password</label>
+                        <input name="conf_password" type="password" id="conf_password"  required/>
                     </div>   
                         
                     <div class="form-container">
@@ -98,9 +95,8 @@
 
                     <!-- Confirm -->
                     <div class="form-container" >
-                        <button type="submit"  id="confirmBtnThree" class="submit-confirm" >
-                            Confirm Password
-                        </button>
+                        <input type="submit"  id="confirmPwdbtn" class="submit-confirm" 
+                            value="Confirm Password" />
                     </div>
                     <!-- /Confirm -->
                 </form>    
@@ -121,7 +117,7 @@
 
                 <!-- Button will close email sent pop-up and return user to login-->
                 <div class="btn-reset-success">
-                    <button class="reset-success"> <a href="login.html" target="_blank" class="back-to-login" >OK</a></button>
+                    <button class="reset-success"> <a href="#"  class="back-to-login" >OK</a></button>
                 </div>
 
                 <!-- /Button will close email sent pop-up and return user to login -->

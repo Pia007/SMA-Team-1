@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // const landingPage = document.getElementById("landing-page");
     const register = document.getElementById("register");
     const confirmAccount = document.getElementById("accountConfirmed");
-    const name = document.getElementById("user_name");
+    const form = document.getElementById("registration-form");
+    const userName = document.getElementById("user_name");
     const email = document.getElementById("user_email");
     const pwd = document.getElementById("user_password");
     const optin = document.getElementById("optIn");
@@ -11,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const BtnSignup = document.getElementById("sign-up");
     const closeRegisterbtn = document.getElementById("registrationClose");
     const backgroundImg = document.getElementById("img-bg");
+
 
     confirmAccount.style.display ="none";
 
@@ -28,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     
     BtnOpt.addEventListener('click', showOptin);
-
     function showOptin(){
         optin.style.display = "block";    
     };
@@ -38,19 +39,27 @@ document.addEventListener("DOMContentLoaded", () => {
         optin.style.display = "none"; 
     };
 
-
-    BtnSignup.addEventListener('click', showConfirmed);
-
-    if (confirmAccount.style.display ="none") {
-        BtnSignup.addEventListener('click', function(e) {
-        e.preventDefault();
-    });
-        BtnSignup.addEventListener('click', showConfirmed);
-    };
-
     function showConfirmed(){
         register.style.display = "none";
         confirmAccount.style.display = "block";
     };
-  
-});
+    // form.addEventListener('input', function(e) {
+    //     BtnSignup.addEventListener('click', function(e) {
+    //         e.preventDefault();
+    //     });
+    //     BtnSignup.addEventListener('click', showConfirmed);  
+    // });
+    
+    
+    form.addEventListener('input', function(e) {
+        BtnSignup.addEventListener('click', function(e) {
+            e.preventDefault();
+        }); 
+        if(userName.value !== "" && email.validity.valid && pwd.validity.valid) {
+            BtnSignup.addEventListener('click', showConfirmed);  
+        };
+    });
+
+    
+    
+});    

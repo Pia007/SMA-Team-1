@@ -13,12 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         closeForgotbtn.addEventListener('click', closeForgot);
     };
-    // if (forgot.style.display ="block") {
-    //     emailSentbtn.addEventListener('click', function(e) {
-    //         e.preventDefault();
-    //     });
-    //     emailSentbtn.addEventListener('click', showSent);
-    // };
+    
     email.addEventListener('input', function(e) {
         emailSentbtn.addEventListener('click', function(e) {
             e.preventDefault();
@@ -27,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             emailSentbtn.addEventListener('click', showSent);
         };
     });
+    
     function closeForgot() {
         forgot.style.display = "none";
         backgroundImg.style.opacity = "1";

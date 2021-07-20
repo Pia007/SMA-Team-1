@@ -162,11 +162,6 @@ form {
     line-height: 21px;
     text-align: center;
 }
-.form-container input[type="email"],
-.form-container input[type="password"] {
-    box-sizing: border-box;
-    padding-left: 10px;
-}
 label {
     width: 340px;
     text-align: left;
@@ -179,10 +174,10 @@ input {
     height: 32px;
     outline: none;
     border: 1px solid var(--very-lt-gray);
-    border-radius: 15px;  
+    border-radius: 15px; 
+    padding-left: 10px;
 }
-input[type=password]:hover,
-input[type=email]:hover {
+input:hover {
     border: 1px solid var(--info);
 }
 .forgot {

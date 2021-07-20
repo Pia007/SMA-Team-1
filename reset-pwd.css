@@ -57,13 +57,16 @@ body {
     font-weight: var(--fw-reg);
     
 }
+.app-bg {
+    opacity: 20%;
+}
 .reset-window {
     display: block;
     position: fixed;
     width: 1004px;
     height: 620px;
     left: 50%;
-    top: 50%;
+    top: 35%;
     z-index: 0;
     transform: translate(-50%, -50%);
     font-size: 1.92rem;
@@ -77,41 +80,9 @@ body {
     border-radius: 15px;
     filter: drop-shadow(0 4px 4px rgba(31, 31, 31, 25%));
 }
-.reset-window {
+/* .reset-window {
     display: none;
-}
-.closeout {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-content: flex-end;
-}
-.button-close {
-    margin-top: .75rem;
-    margin-right: .68rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: var(--off-white);
-    border: none;
-}
-.button-close:hover {
-    border: 1px solid var(--error);
-    font-weight: var(--fw-robo-sbold);
-    background-color: var(--error);
-    border-radius: 3px;
-}
-a.close {
-    margin-top: .75rem;
-    font-size: var(--fs-xlarge);
-    border: none;
-    vertical-align: middle;
-    align-self: center;
-    color: var(--dark-blue); 
-}
-.close:hover {
-    color: var(--white);
-    cursor: pointer;
-}
+} */
 .reset-form-layout {
     height: auto;
     width: 904px;
@@ -212,8 +183,8 @@ form,
 .form-container:nth-child(2) {
     margin-top: 0;
 }
-label[for=user_password],
-label[for=re-enter] { 
+
+label { 
     width: 26.15rem;
     text-align: left;
     margin-top: .75rem;
@@ -223,19 +194,16 @@ label[for=re-enter] {
     padding-left: 10px;
     font-size: var(--fs-18px);
 }
-label[for=user_password]:hover,
-label[for=re-enter]:hover {
-    color: var(--info);
-}
-input[type=password] {
+input {
     width: 26.15rem;
     height: 2.46rem;
     border: 1px solid var(--very-lt-gray);
     border-radius: var(--fs-large);  
     margin-bottom: 3px;
     padding-left: var(--fs-xxsmall);
+    outline: none;
 }
-input[type=password]:hover{
+input:hover {
     border: 1px solid var(--info);
 }
 .instructions {
@@ -287,9 +255,6 @@ p.guide {
         width: 90%;
         justify-content: center;
         align-content: center;
-    }
-    .button-close {
-        margin-right: 0;
     }
     .reset-form-layout {
         width: 440px;
@@ -409,8 +374,7 @@ p.guide {
         filter: none;
         box-shadow: none; 
     }
-    label[for=user_password],
-    label[for=re-enter] {
+    label {
         font-size: var(--fs-default);
         margin-left: 1.5rem;
         margin-bottom: 0;

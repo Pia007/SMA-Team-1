@@ -69,7 +69,7 @@ body {
     height: 20.30rem;
     min-height: 17.30rem;
     left: 50%;
-    top: 30%;
+    top: 21%;
     overflow: auto;
     transform: translate(-50%, -50%);
     background-color: var(--off-white);
@@ -152,6 +152,7 @@ a.reset-success:focus {
         max-width: 90%;
         min-width: 80%;
         margin: 2rem auto;
+        top: 18%;
     }
     .pwd-success-header {
         height: 25%;
@@ -177,12 +178,15 @@ a.reset-success:focus {
 }
 /* max-width 768px */
 @media screen and (max-width: 47.93em) {
-    .modal-1-header {
+    .password-success {
+        top: 18%;
+    }
+ 
+    .pwd-success-header {
         height: 57px;
     }
-    #mobile,
-    #mobile-p,
-    #reply-two {
+    .password-success-p,
+    .pwd-reply {
         display: block;
         height: 100%;
         font-size: var(--fs-default);
@@ -190,10 +194,10 @@ a.reset-success:focus {
         padding-bottom: 0;
         height: 60px;
     }
-    #reply-two {
+    .pwd-reply {
         font-size: var(--fs-xlarge);
     }
-    #mobile-p {
+    .password-success-p {
         padding: auto 1rem;
         padding-top: 0; 
     }

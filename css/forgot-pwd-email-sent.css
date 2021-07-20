@@ -68,7 +68,7 @@ body {
     height: 20.30rem;
     min-height: 17.30rem;
     left: 50%;
-    top: 30%;
+    top: 21%;
     overflow: auto;
     transform: translate(-50%, -50%);
     background-color: var(--off-white);
@@ -150,6 +150,7 @@ body {
         max-width: 90%;
         min-width: 80%;
         margin: 2rem auto;
+        top: 21%;
     }
     .email-header {
         height: 40%;
@@ -194,9 +195,7 @@ body {
 
 /* max-width 767px */
 @media screen and (max-width: 47.93em) {
-    .email-window {
-        top: 21%;
-    }
+
     .modal-1-header {
         height: 57px;
     }

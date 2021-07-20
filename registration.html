@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author"  content="Pia Torain">
     <meta name="description"  content="The Registration Page of SMA-T1 pro">
-    <link rel="stylesheet" href="/css/header-bg-and-X.css">
-    <link rel="stylesheet" href="registration.css">
-    <link rel="stylesheet" href="/css/registration-checkbox.css">
-    <link rel="stylesheet" href="registration-acct-confirm.css">
+    <link rel="stylesheet" href="css/header-bg-and-X.css">
+    <link rel="stylesheet" href="css/registration.css">
+    <link rel="stylesheet" href="registration-checkbox.css">
+    <link rel="stylesheet" href="css/registration-acct-confirm.css">
     <title>Registration</title>
 </head>
 <body>
@@ -27,10 +27,10 @@
         </div>
         
         <div class="header-right" id="right">
-            <a class="links" href="#home">Home</a>
-            <a class="links" href="login.html" target="_blank">Log in</a>
-            <a class="links" href="#signup">Sign Up</a>
-            <a class="links" href="#about-us">About Us</a>
+            <a class="links" href="#">Home</a>
+            <a class="links" href="login.html" alt="link to login page">Log in</a>
+            <a class="links" href="registration.html" alt="linkt to registration page">Sign Up</a>
+            <a class="links" href="#">About Us</a>
         </div>
     </div>
  
@@ -109,17 +109,17 @@
                     <!-- Registration -->
                     <div class="form-container">
                         <label for="user_name">Display Name</label>
-                        <input name="user_name" type="text" id="user_name" autocomplete="on" required/>
+                        <input name="user_name" type="text" id="user_name"   required/>
                     </div>
 
                     <div class="form-container">
                         <label for="user_email">Email</label>
-                        <input name="user_email" type="email" id="user_email" autocomplete="on" required/>
+                        <input name="user_email" type="email" id="user_email"  required/>
                     </div>
 
                     <div class="form-container">
                         <label for="user_paswword" >Password</label>
-                        <input name="user_password" type="password" id="user_password" autocomplete="on" required minlength="8"/>
+                        <input name="user_password" type="password" id="user_password" pattern="^(?=.*[A-Za-z])(?=.*\d).{8,}$" required />
                     </div>
 
                     <div class="criteria">
@@ -160,8 +160,8 @@
 
                         <!-- Agree to terms -->
                         <p class="reg-terms">
-                            By clicking "Sign up", you agree to our <a href="#">terms of service</a>, <a href="#">privacy policy</a>
-                            and <a href="#">cookie policy</a>
+                            By clicking "Sign up", you agree to our terms of service, privacy policy
+                            and cookie policy
                         </p>
                         <!-- /Agree to terms -->
                     </div>                  
@@ -222,6 +222,6 @@
     </section>
     <!-- /Account Confirmed Pop-up -->
 
-    <script src="registration.js"></script>
+    <script src="jS/registration.js"></script>
 </body>
 </html>
