@@ -1,5 +1,50 @@
 /* HEADER, BACKGROUNG AND CLOSE BUTTON CSS */
 
+:root {
+    --roboto: 'Roboto', sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
+    
+    /* FONT-SIZES */
+    --fs-xlarge: 1.615rem;
+    --fs-18px: 1.38rem;
+    --fs-16px: 1.23rem;
+    --fs-large: 1.15rem;
+    
+    --fs-medium: 1.07rem;
+    --fs-default: 1rem;
+    --fs-small: .9230rem;
+    --fs-xsmall: .846rem;
+    --fs-xxsmall: .769rem;
+
+    /* FONT WEIGHT */
+    --fw-light: 300;
+    --fw-reg: 400;
+    --fw-med: 500;
+    --fw-bold: 700;
+
+    /* TEXT COLORS */
+    --dk: #1E1E1E;
+    --gray: #616161;
+    --lt-gr: #AFB1B2;
+
+    /* BACKGROUND COLORS */
+    --near-bk: #1E1E1E;
+    --very-lt-gray: #CCCCCC;
+    --white: #FFFFFF;
+    --off-white: #F8F8F8;
+    --rect-gray: #C4C4C4;
+    --borders: #E1E1E1;
+
+    /* COLORS */
+    --info: #53B6E0;
+    --success: #74C080;
+    --warning: #F0B518;
+    --error: #D9534F;
+    --dark-blue: #14223D;
+    --google-red: #DB4437;
+}
+
+
 /* Background image */
 #bg {
     position: fixed; 
@@ -69,7 +114,11 @@ a {
 .header-right a:hover,
 .header-right a:focus {
     color: var(--info);
-    text-decoration: underline;
+    font-weight: var(-fw-med);
+}
+.header-right a:visited {
+    
+    font-weight: var(--fw-bold);
 }
 
 .logo {
@@ -128,9 +177,7 @@ a {
 }
 /* max width 768px */
 @media screen and (max-width: 48em) {
-    #bg img {
-        display: none;
-    }
+
     .header-layout {
         width: 100%;
         min-width: 375px;

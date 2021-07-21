@@ -11,7 +11,7 @@
     
     --fs-medium: 1.07rem;
     --fs-default: 1rem;
-    --fs-small: .9230r;
+    --fs-small: .9230rem;
     --fs-xsmall: .846rem;
     --fs-xxsmall: .769rem;
 
@@ -19,7 +19,8 @@
     --fw-light: 300;
     --fw-reg: 400;
     --fw-med: 500;
-    --fw-bold: 700;
+    --fw-montserrat-sbold: 600;
+    --fw-robo-bold: 700;
 
     /* TEXT COLORS */
     --dk: #1E1E1E;
@@ -40,7 +41,6 @@
     --warning: #F0B518;
     --error: #D9534F;
     --dark-blue: #14223D;
-    --google-red: #DB4437;
 
 }
 
@@ -57,18 +57,18 @@ body {
     font-weight: var(--fw-reg);
     
 }
-.app-bg {
-    opacity: 20%;
-}
-/* Account Confirmed PopUp styling */
 
-.acct-confirmed {
-    display: block;
+/* Email Sent PopUp styling */
+
+.password-success {
+    display: none;
     position: fixed;
     width: 1004px;
     min-width: 65rem;
+    height: 20.30rem;
+    min-height: 17.30rem;
     left: 50%;
-    top: 30%;
+    top: 21%;
     overflow: auto;
     transform: translate(-50%, -50%);
     background-color: var(--off-white);
@@ -77,149 +77,133 @@ body {
     border-radius: 15px;
     filter: drop-shadow(0 4px 4px rgba(31, 31, 31, 25%));
 }
-.confirm-content {
+.pwd-success-content {
     display: flex;
     flex-direction: column;
 }
-.confirm-header {
+.pwd-success-header {
     width: 100%;
     height: 96px;
     color: var(--white);
     background: var(--info);
     border-radius: 15px 15px 0 0;
 }
-.confirm-header h2 {
+.pwd-success-header h2 {
     padding: 30px 20px;
     font-size: 36px;
     font-family: var(--roboto);
     font-weight: var(--fw-med); 
 }
-
-.confirm-p {
+.pwd-success-p {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
     height: 158px;
-    
+    font-size: 24px;
     padding: 20px;
 }
-#confirm-reply {
-    height: 56px;
-    font-size: 1.84rem;
-    font-weight: var(--fw-reg);
+.pwd-reply {
+    height: 87px;
 }
-
-.acct-success {
+.pwd-success-p a {
+    text-decoration: underline;
+    font-weight: var(--fw-robo-bold);
+    color: var(--info);
+}
+.btn-reset-success {
     display: flex;
     justify-content: flex-end;
 }
-
-.btn-reset-success {
+.reset-success {
     display: flex;
     justify-content: center;
     align-content: center;
     width: 100px;
     height: 32px;
-    font-size: 16px;
-    font-weight: var(--fw-bold);
+    font-size: var(--fs-16px);
+    font-family: (var(--roboto));
+    font-weight: (var(--fw-robo-bold));
     color: var(--white);
     background-color: var(--info);
     border: 1px solid var(--info);
     border-radius: 15px;      
 }
-a.go-to-almost{
+
+a.back-to-login {
     width: 200px;
     color: var(--white);
     background-color: var(--info);
     text-decoration: none;
-    margin: auto;
+    margin: auto; 
 }
-.acct-success:hover,
-.acct-success:focus {
+a.reset-success:hover,
+a.reset-success:focus {
     opacity: 80%;
     cursor: pointer;
 }
 
-/* max-width 1040px*/
+/* Responsive design for password reset popup max-width 1040px*/
 
 @media screen and (max-width: 65em) {
-    html,
-    body {
 
-        width: 100%;
-        height: 100%;
-    }
-    .acct-confirmed  {
+    .password-success  {
         max-width: 90%;
-        min-width: 289px;
-        max-height: 264px;
-        min-height: 225px;
+        min-width: 80%;
         margin: 2rem auto;
+        top: 18%;
     }
-    .confirm-header {
-        height: auto;
+    .pwd-success-header {
+        height: 25%;
     }
-    .confirm-header h2 {
+    .pwd-success-header h2 {
         text-align: center;
         padding: 15px 10px;
-        font-size: 2.3em;
-        margin: 0;  
+        font-size: 2em;
+        margin: 0;
+        
     } 
-    .confirm-p {
+    .pwd-success-p {
         width: 100%;
         height: 180px;
-        padding: auto;
-        padding-bottom: 1rem;
+        padding: .5rem;
     }
-    #confirm-reply {
-        text-align: left;
-        font-size: 1.65em;
-    }
-    #bg img {
-        display: block;
-    }
-    .acct-success {
-        justify-content: flex-end;
-        margin-top: 1rem;
-    }
-    a.go-to-almost {
-        margin-top: 6px;
-    }
-}
-
-/* max-width 375px */
-@media screen and (max-width: 28.84em) {
-    .acct-confirmed {
-        width: auto;
-        top: 20%;
-    }
-    .confirm-header {
-        height: auto;
-        font-size: .81em;
-    }
-    .confirm-p {
-        align-content: center;
-        height: 150px;
-        width: 257px;
-        align-content: center;
-        margin: 1rem;
-        margin-bottom: 2rem;
-        padding: 0;
-    }
-    #confirm-reply {
-        width: auto;
-        display: block;
-        height: 75px;
-        font-size: 1.1em;
-        padding: var(--fs-xxsmall);
-        padding: 0 .5rem;
-        line-height: 1.2;  
-    }
-    .acct-success {
-        margin: 0;
+    .pwd-reply {
+        text-align: center;
     }
     .btn-reset-success {
+        justify-content: center;
+    }
+}
+/* max-width 768px */
+@media screen and (max-width: 47.93em) {
+    #bg img {
+        display: none;
+    }
+    .password-success {
+        top: 18%;
+    }
+ 
+    .pwd-success-header {
+        height: 57px;
+    }
+    .password-success-p,
+    .pwd-reply {
+        display: block;
+        height: 100%;
+        font-size: var(--fs-default);
+        padding: var(--fs-xxsmall);
+        padding-bottom: 0;
+        height: 60px;
+    }
+    .pwd-reply {
+        font-size: var(--fs-xlarge);
+    }
+    .password-success-p {
+        padding: auto 1rem;
+        padding-top: 0; 
+    }
+    .reset-success {
         padding-right: 5px;
-    }     
+    } 
 }

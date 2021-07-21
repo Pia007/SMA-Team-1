@@ -398,7 +398,7 @@ p.pop-text-one {
     .register-window {
         width: 321px;
         height: 768px; 
-        top: 40%;
+        top: 35%;
         border: none;
         background: none;  
         filter: none;
@@ -541,4 +541,8 @@ p.pop-text-one {
         padding-right: .5rem;
     }
 }
-
+@media screen and (max-width: 48em) {
+    #bg img {
+        display: none;
+    }
+}

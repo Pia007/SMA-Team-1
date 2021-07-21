@@ -319,7 +319,11 @@ p.guide {
         max-width: 100%;
     }  
 }
-
+@media screen and (max-width: 48em) {
+    #bg img {
+        display: none;
+    }
+}
 /* max width 500px */
 @media screen and (max-width: 31.25em) {
     .reset-window {

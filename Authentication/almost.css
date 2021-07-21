@@ -273,6 +273,12 @@ input:hover {
     line-height: 1.2;
 }
 
+@media screen and (max-width: 48em) {
+    #bg img {
+        display: none;
+    }
+}
+
 /* MOBILE DESIGN - max-width 450px*/
 @media screen and (max-width:57.69em) {
     html,

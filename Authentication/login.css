@@ -167,7 +167,8 @@ label {
     margin-bottom: .25rem;
     padding-left: 2px;
 }
-input {
+input,
+button {
     width: 340px;
     height: 32px;
     outline: none;
@@ -256,12 +257,15 @@ input:hover {
 }
 /* Sign In button*/
 .submit {
-    color: white;
-    font-size: var(--fs-large);
-    font-weight: var(--fw-bold);
+    
     border-radius: 15px;
     background-color: var(--info);
     border: 1px solid var(--info);  
+}
+.submit a {
+    color: white;
+    font-size: var(--fs-large);
+    font-weight: var(--fw-bold);
 }
 .submit:hover {
     opacity: 80%;
@@ -295,6 +299,9 @@ input:hover {
     body {
         width: 100%;
         height: 100%;
+    }
+    #bg img {
+        display: none;
     }
     .window {
         max-width: 321px;
@@ -338,7 +345,8 @@ input:hover {
         padding-left: 10px;
         font-size: var(--fs-default);
     }
-    input {
+    input,
+    button {
         width: 255px;
         height: 32px;
         font-size: var(--fs-default);

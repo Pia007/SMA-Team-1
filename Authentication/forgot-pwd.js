@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // const landingPage = document.getElementById("landing-page");
     const forgot = document.getElementById("forgot");
     const closeForgotbtn =document.getElementById("forgotClose");
     const backgroundImg = document.getElementById("img-bg");
@@ -7,12 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const emailSentbtn = document.getElementById("btn-send");
     const emailPopup = document.getElementById("emailSent");
 
-    if (forgot.style.display ="block") {
-        closeForgotbtn.addEventListener('click', function(e) {
-            e.preventDefault();
-        });
-        closeForgotbtn.addEventListener('click', closeForgot);
-    };
     
     email.addEventListener('input', function(e) {
         emailSentbtn.addEventListener('click', function(e) {
@@ -23,12 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     });
     
-    function closeForgot() {
-        forgot.style.display = "none";
-        backgroundImg.style.opacity = "1";
-        // landingPage.style.display = "block";
-    };
-
     function showSent() {
         forgot.style.display = "none";
         emailPopup.style.display = "block";
