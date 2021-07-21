@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const newPass = document.getElementById("new_password").value;
     const confPass = document.getElementById("conf_password").value;
     const reset = document.getElementById("reset");
-    const BtnConfirm = document.getElementById("confirmPwdBtn");
+    const btnConfirm = document.getElementById("confirmBtn");
     const success = document.getElementById("successReset");
     const closeResetbtn = document.getElementById("resetClose");
     const backgroundImg = document.getElementById("img-bg");
@@ -23,34 +23,27 @@ document.addEventListener("DOMContentLoaded", () => {
     
     };
 
+    // THIS WORKS
+    form.addEventListener('input', function(e) {
+        btnConfirm.addEventListener('click', function(e) {
+            e.preventDefault();
+        });    
+        if (confPass == newPass) {
+            btnConfirm.addEventListener('click', showSuccess);
+        };
+    });
+
+    // Check this tomorrow. Issue was button id not being valid.  Next try to make validate 
+    // btnConfirm.addEventListener('click', function(e) {
+    //         e.preventDefault();
+    //     }); 
+    //     btnConfirm.addEventListener('click', showSuccess);  
+    
     function showSuccess() {
         reset.style.display = "none";
         success.style.display = "block";
     };
-
-    form.addEventListener('input', function(e) {
-        BtnConfirm.addEventListener('click', function(e) {
-            e.preventDefault();
-        });
-        BtnConfirm.addEventListener('click', showSuccess);  
-    });
-
-    // form.addEventListener('input', function(e) {
-    //     btnConfirmpwd.addEventListener('click', function(e) {
-    //         e.preventDefault();
-    //     }); 
-    //     if(pass1.validity.valid && pass2.validity.valid && pass2 == pass1) {
-    //         btnConfirmpwd.addEventListener('click', showSuccess);  
-    //     };
-    // });
-    // form.addEventListener('input', function(e) {
-    //     confirmPwdbtn.addEventListener('click', function(e) {
-    //         e.preventDefault();
-    //     }); 
-    //     if (pass1.validity.valid && pass1 == pass2) {
-    //         confirmPwdbtn.addEventListener('click', showSuccess);
-    //     };
-    // });
-
 });
+    
+
 
