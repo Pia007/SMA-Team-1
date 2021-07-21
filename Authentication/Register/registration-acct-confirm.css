@@ -68,7 +68,7 @@ body {
     height: 264px;
     min-height: 264px;
     left: 50%;
-    top: 30%;
+    top: 20%;
     overflow: auto;
     transform: translate(-50%, -50%);
     background-color: var(--off-white);
@@ -182,7 +182,7 @@ a.go-to-almost{
     }
 }
 
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 768px) {
     #bg img {
         display: none;
     }
@@ -190,6 +190,9 @@ a.go-to-almost{
 
 /* max-width 375px */
 @media screen and (max-width: 28.84em) {
+    #bg img {
+        display: none;
+    }
     .acct-confirmed {
         height: auto;
         width: auto;
