@@ -13,4 +13,5 @@ document.addEventListener("DOMContentLoaded", () => {
         if (email.validity.valid && pwd.validity.valid) {
             login.addEventListener('click', showSent);
         }
+    });
 });
